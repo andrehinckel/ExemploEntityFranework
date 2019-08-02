@@ -18,6 +18,7 @@ namespace View.Controllers
 
         public IActionResult Index()
         {
+
             return View();
         }
 
@@ -38,7 +39,8 @@ namespace View.Controllers
         public JsonResult ObterTodos(int quantidade = 10, int pagina = 0, string busca = "", string colunaOrdem = "nome", string ordem = "ASC")
         {
             List<Categoria> categorias = repository.ObterTodos(quantidade, pagina, busca, colunaOrdem, ordem);
-            return Json(categorias);
+
+            return Json(new { data = categorias });
         }
 
         [HttpPost]
