@@ -32,3 +32,4 @@ C:\Users\65970\Source\Repos\ExemploEntityFranework\View\obj\Debug\netcoreapp2.1\
 C:\Users\65970\Source\Repos\ExemploEntityFranework\View\obj\Debug\netcoreapp2.1\View.csproj.CopyComplete
 C:\Users\65970\Source\Repos\ExemploEntityFranework\View\obj\Debug\netcoreapp2.1\View.dll
 C:\Users\65970\Source\Repos\ExemploEntityFranework\View\obj\Debug\netcoreapp2.1\View.pdb
+C:\Users\65970\Source\Repos\ExemploEntityFranework\View\obj\Debug\netcoreapp2.1\Razor\Views\Categoria\ModalCadastro.g.cshtml.cs
