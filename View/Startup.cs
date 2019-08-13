@@ -37,6 +37,9 @@ namespace View
 
             services.AddDbContext<SistemContext>(options => options.UseSqlServer(Configuration.GetConnectionString("SqlServerConnection")));
             services.AddTransient(typeof(ICategoriaRepository), typeof(CategoriaRepository));
+            services.AddTransient(typeof(IPecaRepository), typeof(PecaRepository));
+            services.AddTransient(typeof(IComputadorRepository), typeof(ComputadorRepository));
+            services.AddTransient(typeof(IComputadorPecaRepository), typeof(ComputadorPecaRepository));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 

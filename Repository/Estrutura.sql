@@ -38,6 +38,7 @@ CREATE TABLE computadores(
 	FOREIGN KEY(id_categoria) REFERENCES categorias(id),
 
 	nome VARCHAR(100),
+
 	preco DECIMAL(8,2),
 	registro_ativo BIT
 );

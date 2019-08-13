@@ -16,6 +16,27 @@ namespace View.Controllers
             this.repository = repository;
         }
 
+        [HttpGet, Route("categoria/obtertodosselect2")]
+        public JsonResult ObterTodosSelect2(string term = "")
+        {
+
+            term = term == null ? "" : term;
+
+            var categorias = repository.ObterTodosSelect2(term);
+
+            List<object> categoriasSelect2 = new List<object>();
+            foreach(Categoria categoria in categorias)
+            {
+                categoriasSelect2.Add(new
+                {
+                    id = categoria.Id,
+                    text = categoria.Nome
+                });
+            }
+
+            return Json(new { results = categoriasSelect2 });
+        }
+
         public IActionResult Index()
         {
 
@@ -32,8 +53,6 @@ namespace View.Controllers
         /// <param name="colunaOrdem"></param>
         /// <param name="ordem"></param>
         /// <returns></returns>
-
-
 
         [HttpGet, Route("/categoria/obtertodos")]
         public JsonResult ObterTodos(Dictionary<string, string> search, int quantidade = 10, int pagina = 0, string colunaOrdem = "nome", string ordem = "ASC")
